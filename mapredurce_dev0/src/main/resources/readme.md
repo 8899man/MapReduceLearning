@@ -27,7 +27,7 @@ winutils相关，hadoop在windows上运行需要winutils支持和hadoop.dll等�
 
 ##hadoop环境测试：
 起一个cmd窗口，起到E:\java\hadoop-2.7.3\bin下，
-[hadoop version](images/hadoop_version.png)
+![image](images/hadoop_version.png)
 格式化系统文件：E:\java\hadoop-2.7.3\bin下执行 
 ````
 hdfs namenode -format  
