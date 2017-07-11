@@ -35,12 +35,12 @@ hdfs namenode -format
 #Intellij idea 搭建开发环境 
 1. 打开Idea新建一个Java项目  
 1.1新建项目  
-[新建项目1](images/01.png)  
-[新建项目2](images/02.png)  
-[新建项目3](images/03.png)  
+![image](images/01.png)  
+![image](images/02.png)  
+![image](images/03.png)  
 2. 项目配置 File ---- Project Structure  
 2.1sdk的配置  
-  [sdk的配置](images/04.png)  
+![image](images/04.png)  
 2.2项目的pom.xml中添加如下的依赖  
 ````
 <dependencies>
@@ -80,9 +80,9 @@ hdfs namenode -format
 然后reimport 加载jar包 
  
 2.3打包配置  
-[打包配置1](images/05.png)  
-[打包配置2](images/06.png)  
-[打包配置3](images/07.png)  
+![image](images/05.png)  
+![image](images/06.png)  
+![image](images/07.png)  
 
 3.开发map-reduce代码 （详见本项目代码部分）
 ````
@@ -91,9 +91,9 @@ WordCount.java
 log4j.properties
 ````
 4.配置编译器（edit configurations）  
-[配置编译器1](images/08.png)  
-[配置编译器2](images/09.png)  
-[配置编译器3](images/10.png)  
+![image](images/08.png)  
+![image](images/09.png)  
+![image](images/10.png)  
 在input 目录下新建 dream.txt 输入如下单词，也可随意。  
 ````
 hello world 
@@ -101,7 +101,7 @@ hello mapredurce
 ````
 
 5.点击运行，查看运行结果。成功的话在output文件夹下可以看到统计数据。  
-[运行结果](images/11.png)  
+![image](images/11.png)  
 本人参考链接：  
 [hadoop2.7.2 window win7 基础环境搭建](http://blog.csdn.net/fly_leopard/article/details/51250443)  
 [Intellij idea开发Hadoop MapReduce程序](http://blog.csdn.net/fenghuibian/article/details/52918576)  
