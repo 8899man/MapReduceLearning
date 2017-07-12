@@ -1,4 +1,4 @@
-#windows+Intellij idea+hadoop2.7.3 下伪分布式开发环境搭建   
+# windows+Intellij idea+hadoop2.7.3 下伪分布式开发环境搭建   
 
 环境介绍  
 windows10 + hadoop2.7.3 + Intellij IDEA2017.1.4  
@@ -7,31 +7,31 @@ hadoop下载：http://apache.opencas.org/hadoop/common/
 解压至无空格目录下即可  
 
 
-#下面配置windows环境：  
+# 下面配置windows环境：  
 
-##Java JDK ：    
+## Java JDK ：    
 
 我采用的是网上的绿色版 配置JAVA_HOME 为 E:\java\jdk1.8.0_40   
 目录路径中不要存在空格，否者hadoop启动报错。    
 
-##Hadoop 环境变量：   
+## Hadoop 环境变量：   
 新建HADOOP_HOME，指向hadoop解压目录，如：E:\java\hadoop-2.7.3   
 path环境变量中增加：%HADOOP_HOME%\bin;  
 
-##Hadoop 依赖库：
+## Hadoop 依赖库：
 winutils相关，hadoop在windows上运行需要winutils支持和hadoop.dll等文件，上github搜索相应hadoop版本的winutils  
 下载地址：https://github.com/rucyang/hadoop.dll-and-winutils.exe-for-hadoop2.7.3-on-windows_X64  
 注意：hadoop.dll等文件不要与hadoop冲突。   
 为了不出现依赖性错误可以将hadoop.dll放到c:/windows/System32下一份。(这步骤不要省略，没放过去会报错的。)  
 
-##hadoop环境测试：  
+## hadoop环境测试：  
 起一个cmd窗口，起到E:\java\hadoop-2.7.3\bin下，  
 ![image](images/hadoop_version.png)
 格式化系统文件：E:\java\hadoop-2.7.3\bin下执行   
 ````
 hdfs namenode -format  
 ````
-#Intellij idea 搭建开发环境   
+# Intellij idea 搭建开发环境   
 1. 打开Idea新建一个Java项目   
 1.1新建项目  
 ![image](images/01.png)  
