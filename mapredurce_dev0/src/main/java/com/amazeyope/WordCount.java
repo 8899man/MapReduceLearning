@@ -1,4 +1,5 @@
 package com.amazeyope;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -12,6 +13,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.StringTokenizer;
+
 /**
  * Created by yope on 2017/7/9.
  */
@@ -55,14 +57,12 @@ public class WordCount {
 
     public static void main(String[] args)
             throws IOException, ClassNotFoundException, InterruptedException {
-       // System.setProperty("HADOOP_USER_NAME", "Administrator");
-       System.setProperty("hadoop.home.dir", "E:\\java\\hadoop-2.7.3");//加了不报错，没加也没有影响
-      //  System.out.println(System.getenv("HADOOP_HOME"));
-        FileUtil.deleteDir("output");
+        System.setProperty("hadoop.home.dir", "E:\\java\\hadoop-2.7.3");//加了不报错，没加也没有影响
+        FileUtil.deleteDir("output");//删除output
         Configuration conf = new Configuration();
-        String[] otherArgs = new String[]{"input/dream.txt","output"};
-       // String[] otherArgs = new String[]{"input/employment_hl_log4j.log.1","output/empl"};
-        if (otherArgs.length != 2) {
+        //也可以代码进行指定 输入和输出目录
+        // args = new String[]{"input/dream.txt","output"};
+        if (args.length != 2) {
             System.err.println("Usage:Merge and duplicate removal <in> <out>");
             System.exit(2);
         }
@@ -72,8 +72,8 @@ public class WordCount {
         job.setReducerClass(WordCount.IntSumReduce.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        FileInputFormat.addInputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }

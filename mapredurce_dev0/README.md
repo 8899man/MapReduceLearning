@@ -19,15 +19,16 @@ hadoop下载：http://apache.opencas.org/hadoop/common/
 path环境变量中增加：%HADOOP_HOME%\bin;  
 
 ## Hadoop 依赖库：
-winutils相关，hadoop在windows上运行需要winutils支持和hadoop.dll等文件，上github搜索相应hadoop版本的winutils  
+winutils相关，hadoop在windows上运行需要winutils支持和hadoop.dll等文件，
+上github搜索相应hadoop版本的winutils  
 下载地址：https://github.com/rucyang/hadoop.dll-and-winutils.exe-for-hadoop2.7.3-on-windows_X64  
 注意：hadoop.dll等文件不要与hadoop冲突。   
 为了不出现依赖性错误可以将hadoop.dll放到c:/windows/System32下一份。(这步骤不要省略，没放过去会报错的。)  
 
 ## hadoop环境测试：  
-起一个cmd窗口，起到E:\java\hadoop-2.7.3\bin下，  
-![image](images/hadoop_version.png)
-格式化系统文件：E:\java\hadoop-2.7.3\bin下执行   
+起一个cmd窗口，起到E:\java\hadoop-2.7.3\bin下，执行hadoop version 如下图    
+![image](images/hadoop_version.png)  
+格式化系统文件：E:\java\hadoop-2.7.3\bin下执行
 ````
 hdfs namenode -format  
 ````
@@ -76,7 +77,7 @@ hdfs namenode -format
         </dependency>
     </dependencies>
 ````
-然后reimport 加载jar包   
+然后reimport 重新加载jar包     
  
 ### 2.3打包配置    
 ![image](images/05.png)  
