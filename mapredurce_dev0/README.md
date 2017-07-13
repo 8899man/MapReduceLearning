@@ -109,8 +109,5 @@ hello mapredurce
 [Intellij idea开发Hadoop MapReduce程序](http://blog.csdn.net/fenghuibian/article/details/52918576)  
 
 
-
-
-​           
 ​           
 
